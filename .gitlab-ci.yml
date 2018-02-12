@@ -7,5 +7,5 @@
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY # login to registry
   image: docker
   script:
-    - docker run -v /var/run/docker.sock:/var/run/docker.sock -v /cache:/cache -v /builds:/builds:rw -v /www/data:/www/data -v /etc/letsencrypt/:/etc/letsencrypt/ -v `pwd`/letsencrypt:/code -w /code code.taskbase.com:50200/taskbase/tb/node-docker node get-certificates.js
+    - docker run -v /var/run/docker.sock:/var/run/docker.sock -v /cache:/cache -v /builds:/builds:rw -v /www/data:/www/data -v /etc/letsencrypt/:/etc/letsencrypt/ -v `pwd`/letsencrypt:/code -w /code node-docker node get-certificates.js
 
