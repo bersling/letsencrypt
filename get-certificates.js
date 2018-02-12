@@ -19,10 +19,10 @@ const dockerCommand = (certificates) => {
 // }
 
 const requiredCertificates = [
-  "-d health-check.taskbase.com",
-  "-d lernnavi.taskbase.com",
-  "-d lernnavi-entrypoint.taskbase.com",
-  "-d testapp.amp-project-starter.com"
+  "-d a.myapp.com",
+  "-d b.myapp.com",
+  "-d c.myapp.com -d d.myapp.com",
+  "-d hello.world.com"
 ];
 
 requiredCertificates.forEach(domainSet => {
